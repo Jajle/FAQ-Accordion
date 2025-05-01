@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/background-pattern-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+body {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#card {
+    width: 550px;
+    height: 550px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 40px 0px hsla(293, 16%, 49%, 0.303);
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#title h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-left: 20px;
+    color: hsl(292, 42%, 14%);
+}
+
+.questionFrame {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(292, 42%, 14%);
+}
+
+.question h2:hover {
+    color: hsl(293, 78%, 54%);
+}
+
+.questionFrame p {
+    display: none;
+    margin-top: 25px;
+    line-height: 1.5rem;
+    color: hsl(292, 16%, 49%);
+}
+
+.question img {
+    transition: transform 0.3s ease;
+}
+  
+.questionFrame.open img {
+    transform: rotate(180deg);
+}
+
+footer {
+    margin: 15px auto;
+}
+
+@media (max-width: 375px) {
+    html {
+        background-image: url(../images/background-pattern-mobile.svg);
+        background-size: 100%;
+        background-repeat:no-repeat;
+    }
+
+    #card {
+        width: 335px;
+        height: 550px;
+        padding: 30px;
+    }
+
+    #title h1 {
+        font-size: 2.5rem;
+    }
+
+    #title img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 810px) {
+    html {
+        background-image: url(../images/background-pattern-desktop.svg);
+        background-size: auto;
+        background-repeat:no-repeat;
+    }
+}
